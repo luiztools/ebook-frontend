@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <label>IP:
+        <input type="text" id="txtIP" value="8.8.8.8" />
+    </label>
+    <p>
+        <input type="button" value="Buscar" onclick="buscarIP()" />
+    </p>
+    <p id="paragrafo"></p>
+    <script>
+        function buscarIP() {
+            const apiKey = "41b9de698e96923c01551438bc860e20";
+            const ip = document.getElementById('txtIP').value;
+            const paragrafo = document.getElementById('paragrafo');
+            fetch(`http://api.ipstack.com/${ip}?access_key=${apiKey}&format=1`)
+                .then(req => req.json())
+                .then(json => paragrafo.innerText = json.country_name)
+                .catch(err => aragrafo.innerText = err);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Programação em JavaScript</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p>Abra o console do navegador para ver o resultado dos scripts.</p>
+    <script>
+        let chave = false;
+        do {
+            //outra instrução qualquer
+            console.log('Imprime!');
+        } while (chave === true)
+
+        //olha o jeito braçal de imprimir números...
+        let x = 0;
+        console.log(x++);
+        console.log(x++);
+        console.log(x++);
+        console.log(x++);
+        console.log(x++);
+        console.log(x++);
+        console.log(x++);
+        console.log(x++);
+        console.log(x++);
+        console.log(x++);
+
+        //mesma coisa com for
+        for (var i = 0; i < 10; i++)
+            console.log(i);
+
+        //mesma coisa com while
+        let y = 0;
+        while (y < 10)
+            console.log(y++);
+
+        //mesma coisa com do/while
+        let z = 0;
+        do {
+            console.log(z);
+        } while (z++ < 10)
+    </script>
+</body>
+
+</html>

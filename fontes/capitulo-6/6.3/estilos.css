@@ -1,0 +1,13 @@
+p {
+    /* todos p's ficarão invisíveis*/
+    /*display: none;*/
+	background-color: #d0e4fe;
+	background-image: url('url da imagem');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 30px;
+    margin-bottom: 15px;
+}

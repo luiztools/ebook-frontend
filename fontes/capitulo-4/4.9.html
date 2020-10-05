@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Programação em JavaScript</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p>Abra o console do navegador para ver o resultado dos scripts.</p>
+    <script>
+        /* for com uma instrução não precisa de chaves
+        for (let i = 0; i < 10; i++)
+            console.log('i=' + i);
+        */
+
+        //for com várias instruções precisa de chaves
+        for (let i = 0; i < 10; i++) {
+            console.log("i=" + i);
+            //outra instrução qualquer, quantas quiser
+        }
+
+        /* while com uma instrução não precisa de chaves
+        let chave = true;
+        while (chave === true)
+            chave = false;
+        */
+
+        //while com várias instruções precisa de chaves
+        let chave = true;
+        while (chave === true) {
+            //outra instrução qualquer
+            console.log('Imprime!');
+            chave = false;
+        }
+
+        let i = 0;
+        while (i < 10) {
+            //outra instrução qualquer
+            console.log('Imprime!');
+            i++;
+        }
+    </script>
+</body>
+
+</html>

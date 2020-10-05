@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cadastro de Cliente</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>Cadastro de Cliente</h1>
+    <p>Preencha os dados abaixo para salvar o cliente.</p>
+    <form action="index.html">
+        <p>
+            <label>Nome: <input type="text" name="nome" /></label>
+        </p>
+        <p>
+            <label>Idade: <input type="number" name="idade" /></label>
+        </p>
+        <p>
+            <label>UF: <select name="uf">
+                    <option>RS</option>
+                    <option>SC</option>
+                    <option>PR</option>
+                    <!-- coloque os estados que quiser -->
+                </select></label>
+        </p>
+        <p>
+            <a href="index.html">Cancelar</a> | <input type="submit" value="Salvar" />
+        </p>
+    </form>
+  </body>
+</html>

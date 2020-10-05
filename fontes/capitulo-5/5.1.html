@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Programação em JavaScript</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p>Clique no botão abaixo para ver a mensagem.</p>
+    <input type="button" value="Teste" onclick="exibirMensagem()" />
+    <hr />
+    <p>Selecione um estado para ver a mensagem.</p>
+    <select onchange="exibirUF(this.value)">
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="PR">Paraná</option>
+    </select>
+    <hr />
+    <p>Passe o mouse sobre a div Teste para ver a mensagem.</p>
+    <div onmouseenter="exibirOutraMensagem('entrou!')" onmouseleave="exibirOutraMensagem('saiu!')">Teste</div>
+    <hr />
+    <p>Clique no campo de texto para ver a mensagem. Depois clique fora dele.</p>
+    <input type="text" onfocus="exibirOutraMensagem('entrou!')" onblur="exibirOutraMensagem('saiu!')" />
+    <hr />
+    <p>Digite alguma coisa no campo de texto para validar números.</p>
+    <input type="text" onkeypress="return validarNumeros(event)" />
+    <script>
+        function exibirMensagem() {
+            alert('funcionou!');
+        }
+
+        function exibirUF(uf) {
+            alert(uf);
+        }
+
+        function exibirOutraMensagem(msg) {
+            alert(msg);
+        }
+
+        function validarNumeros(e) {
+            var unicode = e.charCode ? e.charCode : e.keyCode;
+            if (unicode != 8) { //8 = backspace
+                if (unicode < 48 || unicode > 57) //se não é um número
+                    return false; //disable key press
+            }
+        }
+    </script>
+</body>
+
+</html>
