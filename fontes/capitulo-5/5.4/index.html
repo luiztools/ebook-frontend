@@ -2,8 +2,9 @@
 <html>
 
 <head>
-  <title>Exemplo DOM</title>
+  <title>Exemplo CSS</title>
   <meta charset="utf-8" />
+  <link href="css/estilos.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -11,11 +12,50 @@
   <p>Sistema para exemplificar manipulação de DOM</p>
   <div id="divCadastro">
     <h2>Cadastro</h2>
-    <input type="button" id="btnListar" value="Listar">
+    <form id="frmCadastro" action="" method="">
+      <p>
+        <label>Nome: <input type="text" name="nome" /></label>
+      </p>
+      <p>
+        <label>Idade: <input type="number" name="idade" /></label>
+      </p>
+      <p>
+        <label>UF: <select name="uf">
+            <option>RS</option>
+            <option>SC</option>
+            <option>PR</option>
+            <!-- coloque os estados que quiser -->
+          </select></label>
+      </p>
+      <p>
+        <input type="button" id="btnListar" value="Listar"> | <input type="submit" value="Salvar" />
+      </p>
+    </form>
   </div>
   <div id="divListagem">
     <h2>Listagem</h2>
-    <input type="button" id="btnCadastrar" value="Cadastrar">
+    <table cellspacing="0">
+      <thead>
+         <tr>
+            <td>Nome</td>
+            <td>Idade</td>
+            <td>UF</td>
+            <td>Ações</td>
+          </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td colspan="4">Nenhum cliente cadastrado.</td>
+         </tr>
+      </tbody>
+      <tfoot>
+           <tr>
+             <td colspan="4">
+                 <input type="button" id="btnCadastrar" value="Cadastrar">
+             </td>
+           </tr>
+      </tfoot>
+   </table>
   </div>
   <script src="js/scripts.js"></script>
 </body>

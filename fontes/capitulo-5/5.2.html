@@ -2,74 +2,41 @@
 <html>
 
 <head>
-    <title>Calculadora</title>
     <meta charset="utf-8" />
 </head>
 
-<body onkeypress="manipularTeclado()">
-    <table>
-        <tr>
-            <td colspan="6"><input type="text" id="display" value="0" disabled></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="7" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="8" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="9" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="*" onclick="atualizarOperacao(this)" /></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="4" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="5" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="6" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="-" onclick="atualizarOperacao(this)" /></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="1" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="2" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="3" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="+" onclick="atualizarOperacao(this)" /></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="C" onclick="limparDisplay()" /></td>
-            <td><input type="button" value="0" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="=" onclick="calcularOperacao()" /></td>
-            <td><input type="button" value="/" onclick="atualizarOperacao(this)" /></td>
-        </tr>
-    </table>
-    <script>
-        function atualizarDisplay(btn) {
-            const display = document.getElementById('display');
-            if (display.value.length === 9) return;
-            if (display.value === '0') display.value = btn.value;
-            else display.value += btn.value;
+<body>
+    <p class="paragrafoInicial">
+        Este texto ficará verde.
+    </p>
+    <p>
+        Este texto terá a cor padrão de parágrafo.
+    </p>
+    <p class="paragrafoInicial paragrafoImportante">Parágrafo cheio de estilo.</p>
+    <p id="paragrafoLegal">Parágrafo legal</p>
+    <style>
+        /* seu estilo vai aqui. A propósito, isto é um comentário CSS */
+        p {
+            color: red;
+            font-family: Arial;
         }
 
-        function limparDisplay() {
-            document.getElementById('display').value = '0';
+        .paragrafoInicial {
+            color: green;
         }
 
-        let operador = '';
-        let valor1 = 0;
-        function atualizarOperacao(btn) {
-            const display = document.getElementById('display');
-            operador = btn.value;
-            valor1 = parseInt(display.value);
-            display.value = '0';
+        .paragrafoImportante {
+            font-weight: bold;
         }
 
-        function calcularOperacao() {
-            const display = document.getElementById('display');
-            const valor2 = parseInt(display.value);
-            valor1 = eval(valor1 + operador + valor2);
-            display.value = valor1;
-            operador = '';
+        table p {
+            color: green;
         }
 
-        function manipularTeclado(){
-            if(/[0-9]/.test(event.key))
-                atualizarDisplay({value: event.key});
-}
-    </script>
+        #paragrafoLegal {
+            color: blue;
+        }
+    </style>
 
 </body>
 

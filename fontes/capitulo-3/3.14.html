@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html>
-   <head>
-	<title>Programação para Internet</title>
-	<meta charset="utf-8" />
-   </head>
-   <body>
-      <div>
-         <h1>Tópico 1</h1>
-         <p>Introdução ao HTML</p>
-      </div>
-      <form action="/teste">
-         <label>Usuário:<input type="text" name="txtusuario" value="Luiz" /></label>
-         <br />
-         <label>Senha:<input type="password" name="txtsenha" value="123" /></label>
-         <br />
-         <label>UF:</label>
-         <select name="cmbUF">
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="PR">Paraná</option>
-         </select>
-      </form>
-   </body>
+
+<head>
+    <title>Programação em JavaScript</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <p>Abra o console do navegador para ver o resultado dos scripts.</p>
+    <script>
+        const numeros = [];
+        numeros[0] = 5;
+        numeros[1] = 3;
+        numeros[1] = 6;
+
+        //comentei pois não posso declarar array com nome igual
+        //const numeros = [];
+        numeros[0] = 8;
+        numeros[1] = 4;
+        numeros[2] = 29;
+
+        const inventores = [];
+        inventores[0] = 'Einstein';
+        inventores[1] = 'Edson';
+        inventores[2] = 'Galileu';
+        inventores[3] = 'Da Vinci';
+
+        const inventor = inventores[3];
+        console.log(inventor);
+
+        //comentei pois não posso declarar array com nome igual
+        //const numeros = [];
+        for (let i = 0; i < 10; i++)
+            numeros[i] = 1;
+
+        //comentei pois não posso declarar array com nome igual
+        //const numeros = [];
+        for (let i = 0; i < 10; i++)
+            numeros.push(1);
+
+        for (let i = 0; i < numeros.length; i++)
+            console.log(numeros[i]);
+    </script>
+</body>
+
 </html>

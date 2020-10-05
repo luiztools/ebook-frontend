@@ -2,28 +2,16 @@
 <html>
 
 <head>
-    <title>Programação em JavaScript</title>
     <meta charset="utf-8" />
 </head>
 
 <body>
-    <p>Abra o console do navegador para ver o resultado dos scripts.</p>
+    <input type="text" name="nome" id="txtNome" /><br />
+    <input type="text" name="nome" id="txtNome2" />
     <script>
-        // Declaracao e inicializacao de duas variaveis, troque os valores se quiser
-        let a = 5;
-        let b = 2;
-        // Varios exemplos de operacoes sobre variaveis
-        console.log('a = ' + a);
-        console.log('b = ' + b);
-        console.log('a + b = ' + (a + b));
-        console.log('a - b = ' + (a - b));
-        console.log('a * b = ' + (a * b));
-        console.log('a / b = ' + (a / b));
-        console.log('a % b = ' + (a % b));
-        console.log('a++ = ' + (a++));
-        console.log('--b = ' + (--b));
-        console.log('a = ' + a);
-        console.log('b = ' + b);
+        document.addEventListener("DOMContentLoaded", function (event) {
+            alert('DOM carregou!');
+        });
     </script>
 </body>
 
